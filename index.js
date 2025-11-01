@@ -302,6 +302,23 @@ app.get("/summary", async (req, res) => {
 
 app.get("/health", (req, res) => res.json({ status: "ok", ts: Date.now() }));
 
+app.get("/", (req, res) => {
+  res.send(`
+    <h1>USD Converter Backend</h1>
+    <p>Available endpoints:</p>
+    <ul>
+      <li><a href="/quotes?region=br">/quotes?region=br</a></li>
+      <li><a href="/average?region=br">/average?region=br</a></li>
+      <li><a href="/slippage?region=br">/slippage?region=br</a></li>
+      <li><a href="/quotes?region=ar">/quotes?region=ar</a></li>
+      <li><a href="/average?region=ar">/average?region=ar</a></li>
+      <li><a href="/slippage?region=ar">/slippage?region=ar</a></li>
+    </ul>
+    <p>Backend is running successfully on Render!</p>
+  `);
+});
+
+
 app.listen(PORT, () => {
   console.log(` USD Converter Backend running on http://localhost:${PORT}`);
   console.log("Available endpoints:");
