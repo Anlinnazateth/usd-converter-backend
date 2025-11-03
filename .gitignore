@@ -13,3 +13,9 @@ Thumbs.db
 
 # Build files
 dist/
+
+# Database
+quotes.db
+
+# Coverage
+coverage/
