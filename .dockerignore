@@ -1,0 +1,9 @@
+node_modules
+.git
+quotes.db
+*.md
+tests
+.env
+.github
+.DS_Store
+Thumbs.db
